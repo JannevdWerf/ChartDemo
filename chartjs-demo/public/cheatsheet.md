@@ -75,19 +75,19 @@ const lineData = {
 ### Stap 4.2 - Options voor de grafieken
 
 ```javascript
-  const commonOptions = {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      title: { display: false },
-    },
-  };
+const commonOptions = {
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {
+    title: { display: false },
+  },
+};
 ```
 
 ### Stap 4.3 - De grafiek implementeren
 
 ```html
-  <Line data={lineData} options={commonOptions} />
+<Line data={lineData} options={commonOptions} />
 ```
 
 ## 👾 Stap 5 - De Bar chart maken
@@ -105,11 +105,10 @@ const barData = {
   ],
 };
 ```
+
 ```html
-  <Bar data={barData} options={commonOptions} />
-
+<Bar data={barData} options={commonOptions} />
 ```
-
 
 ### Stap extra - Chart
 
@@ -135,6 +134,7 @@ const mixedData = {
   ],
 };
 ```
+
 ```javascript
 const mixedOptions = {
   ...commonOptions,
@@ -154,6 +154,7 @@ const mixedOptions = {
   },
 };
 ```
+
 ```html
 <section className="w-full px-4 md:px-8 mt-12">
   <div className="rounded-2xl shadow-lg bg-white p-8 w-full">
@@ -161,8 +162,9 @@ const mixedOptions = {
       Combined Users & Revenue
     </h2>
     <div className="relative h-96 w-full">
-      <ReactChart type='line' data={mixedData} options={mixedOptions} />
+      <ReactChart type="line" data={mixedData} options={mixedOptions} />
     </div>
   </div>
-</section>;
+</section>
+;
 ```
