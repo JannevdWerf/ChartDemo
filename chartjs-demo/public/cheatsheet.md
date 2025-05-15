@@ -19,7 +19,7 @@ import {
 #### Stap 2.2 – react-chartjs-2
 
 ```javascript
-import { Line, Bar, Chart } from "react-chartjs-2";
+import { Line, Bar, Chart as ReactChart } from "react-chartjs-2";
 ```
 
 #### Stap 2.3 – Registreren van de modules
@@ -87,9 +87,7 @@ const lineData = {
 ### Stap 4.3 - De grafiek implementeren
 
 ```html
-<div className="relative h-96 w-full">
   <Line data={lineData} options={commonOptions} />
-</div>
 ```
 
 ## 👾 Stap 5 - De Bar chart maken
@@ -108,9 +106,8 @@ const barData = {
 };
 ```
 ```html
-<div className="relative h-96 w-full">
   <Bar data={barData} options={commonOptions} />
-</div>
+
 ```
 
 
@@ -152,6 +149,7 @@ const mixedOptions = {
       type: "linear",
       position: "right",
       title: { display: true, text: "Revenue (€)" },
+      grid: { drawOnChartArea: false },
     },
   },
 };
@@ -163,7 +161,7 @@ const mixedOptions = {
       Combined Users & Revenue
     </h2>
     <div className="relative h-96 w-full">
-      <ReactChart data={mixedData} options={mixedOptions} />
+      <ReactChart type='line' data={mixedData} options={mixedOptions} />
     </div>
   </div>
 </section>;

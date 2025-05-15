@@ -162,4 +162,10 @@ Maak een nieuwe section aan met daarin de benodigde div's en de grafiek. Gebruik
 </section>;
 ```
 
-Dat was het!
+Je kan misschien nu zien dat de grafiek dubbele lijntjes heeft. Dit komt omdat de de `y-users` en `y-revenue` allebei hun grid aangeven. dit kan je uitzetten door de `grid` op `drawOnChartArea: false` te zetten. Dit is een object in de `y-revenue` en `y-users` objecten.
+
+* Zet de `grid` op `drawOnChartArea: false` bij `y-revenue`.
+
+---
+
+Ik hoop dat je het leuk vond. Slaap lekker en tot de volgende keer. Als je nog vragen hebt, niet aankloppen.

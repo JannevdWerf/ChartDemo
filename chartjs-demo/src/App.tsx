@@ -38,9 +38,9 @@ export default function App() {
             Revenue Growth
           </h2>
           <div className="relative h-96 w-full">
-
-            {/* Stap 4.3 – Lijn grafiek */}
-
+            <div className="relative h-96 w-full">
+              {/* Stap 4.3 – Lijn grafiek */}
+            </div>
           </div>
         </div>
         <div className="rounded-2xl shadow-lg bg-white p-8 w-full">
@@ -49,8 +49,9 @@ export default function App() {
           </h2>
           <div className="relative h-96 w-full"></div>
 
-          {/* Stap 5 – Staaf grafiek */}
-
+          <div className="relative h-96 w-full">
+            {/* Stap 5 – Staaf grafiek */}
+          </div>
         </div>
       </section>
 
