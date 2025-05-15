@@ -17,18 +17,24 @@ Als mensen er niet uitkomen. Er staat in de `public` map een cheatsheet markdown
 Open je terminal en kies je gewenste map waar je het project wil downloaden.
 ```bash
 git clone https://github.com/JannevdWerf/ChartDemo.git
-cd chart-demo
+cd ChartDemo/chartjs-demo
 ```
 En installeer de packages.
 ```bash
 npm i
+```
+En run de applicatie.
+```bash
+npm run dev
 ```
 
 ---
 
 ## 📊 Stap 2 – Toevoegen van de imports
 
-We hebben natuurlijk eerst de imports nodig om de Charts te maken. Zet bovenin de applicatie 2 imports:
+We hebben natuurlijk eerst de imports nodig om de Charts te maken.
+Ga naar de `App.tsx` file.
+Zet bovenin de applicatie 2 imports:
 #### Stap 2.1 – Chart.js
 Je moet van `chart.js`: Chart als ChartJS, CategoryScale, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip en Legend importeren.
 
@@ -38,6 +44,15 @@ En van `react-chartjs-2`: Line, Bar en Chart als ReactChart.
 
 #### Stap 2.3 – Registreren van de modules
 Daarna mag je de modules registreren. Dat doe je met ChartJS.register. Dit is een soort van initialisatie van de modules die je net hebt geïmporteerd. Gebruik `ChartJS.register()` om de modules te registreren.
+Zet in de register functie de modules die je net hebt geïmporteerd. Dit is een soort van initialisatie van de modules die je net hebt geïmporteerd.
+*   CategoryScale,
+* LinearScale,
+*  PointElement,
+*  LineElement,
+*  BarElement,
+*  Title,
+*  Tooltip,
+*  Legend
 
 ---
 
@@ -79,8 +94,7 @@ We maken een `commonOptions` object aan. Dit object bevat de opties voor de graf
 * We gebruiken de `responsive` optie om de grafiek responsief te maken.
 * Ook willen wij dat de `maintainAspectRatio` op `false` staat.
 * We gebruiken de `plugins` optie om de plugins in te stellen.
-  * We gebruiken de `legend` plugin om de legend in te stellen. Dat doen we door de `position` op `top` te zetten als `const`
-  * We gebruiken de `title` plugin om hem op `false` te zetten. Dit is optioneel, maar het is wel leuk om te doen.
+  * We gebruiken de `title` plugin om het display op `false` te zetten. Dit is optioneel, maar het is wel leuk om te doen.
 
 [Klik hier voor officiele documentatie van Chart.js over options](https://www.chartjs.org/docs/latest/general/options.html)
 

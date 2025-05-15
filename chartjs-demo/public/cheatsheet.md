@@ -3,7 +3,7 @@
 #### Stap 2.1 – Chart.js
 
 ```javascript
-import ChartJS, {
+import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
@@ -79,7 +79,6 @@ const lineData = {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
-      legend: { position: "top" as const },
       title: { display: false },
     },
   };
