@@ -19,7 +19,7 @@ import {
 #### Stap 2.2 – react-chartjs-2
 
 ```javascript
-import { Line, Bar, Chart } from "react-chartjs-2";
+import { Line, Bar, Chart as ReactChart } from "react-chartjs-2";
 ```
 
 #### Stap 2.3 – Registreren van de modules
@@ -75,21 +75,19 @@ const lineData = {
 ### Stap 4.2 - Options voor de grafieken
 
 ```javascript
-  const commonOptions = {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      title: { display: false },
-    },
-  };
+const commonOptions = {
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {
+    title: { display: false },
+  },
+};
 ```
 
 ### Stap 4.3 - De grafiek implementeren
 
 ```html
-<div className="relative h-96 w-full">
-  <Line data={lineData} options={commonOptions} />
-</div>
+<Line data="{lineData}" options="{commonOptions}" />
 ```
 
 ## 👾 Stap 5 - De Bar chart maken
@@ -107,12 +105,10 @@ const barData = {
   ],
 };
 ```
-```html
-<div className="relative h-96 w-full">
-  <Bar data={barData} options={commonOptions} />
-</div>
-```
 
+```html
+<Bar data="{barData}" options="{commonOptions}" />
+```
 
 ### Stap extra - Chart
 
@@ -138,6 +134,7 @@ const mixedData = {
   ],
 };
 ```
+
 ```javascript
 const mixedOptions = {
   ...commonOptions,
@@ -152,10 +149,12 @@ const mixedOptions = {
       type: "linear",
       position: "right",
       title: { display: true, text: "Revenue (€)" },
+      grid: { drawOnChartArea: false },
     },
   },
 };
 ```
+
 ```html
 <section className="w-full px-4 md:px-8 mt-12">
   <div className="rounded-2xl shadow-lg bg-white p-8 w-full">
@@ -163,8 +162,9 @@ const mixedOptions = {
       Combined Users & Revenue
     </h2>
     <div className="relative h-96 w-full">
-      <ReactChart data={mixedData} options={mixedOptions} />
+      <ReactChart type="line" data={mixedData} options={mixedOptions} />
     </div>
   </div>
-</section>;
+</section>
+;
 ```
